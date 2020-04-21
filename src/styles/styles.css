@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.projectsPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 60px 10px;
+}
+
+.project {
+  border: black solid 1px;
+  margin: 20px;
+}
+
+.project div {
+  height: 230px;
+  width: 400px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.project h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.Areii {
+  background-image: url("../images/Areii.PNG");
+}
+
+.Pawesome {
+  background-image: url("../images/PawesomePets.PNG");
+}
+
+.AdviceAPI {
+  background-image: url("../images/AdviceAPI.png");
+}
+
+.Dalton {
+  background-image: url("../images/DaltonCottage.png");
+}
+
+.MarioPest {
+  background-image: url("../images/Mario.png");
+}
+
+.BountyHunter {
+  background-image: url("../images/BountyHunter.png");
+}
+
+.DJReact {
+  background-image: url("../images/DJReact.png");
+}
+
+.FloraMagazine {
+  background-image: url("../images/magazine.png");
+}
+
+.WerewolfRole {
+  background-image: url("../images/WerewolfRole.png");
+}
+/*# sourceMappingURL=styles.css.map */

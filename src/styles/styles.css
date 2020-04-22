@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 .projectsPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,13 +17,12 @@
 }
 
 .project {
-  border: black solid 1px;
+  border: 3px solid #4A4D54;
+  border-radius: 2px;
   margin: 20px;
 }
 
 .project div {
-  height: 230px;
-  width: 400px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -36,6 +30,91 @@
 .project h2 {
   text-align: center;
   padding: 10px;
+}
+
+.ReactModalPortal {
+  color: #303030;
+}
+
+.ReactModalPortal div div {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ReactModalPortal div div p {
+  margin: 15px 0px;
+}
+
+.ReactModalPortal div div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ReactModalPortal div div li {
+  list-style-type: none;
+  background-color: rgba(248, 219, 105, 0.911);
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.ReactModalPortal div div .modalLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ReactModalPortal div div .modalLinks a {
+  margin: 5px;
+}
+
+.ReactModalPortal div div button {
+  background-color: #4A4D54;
+  color: #dad8d8;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+.ReactModalPortal div div button:hover {
+  color: rgba(248, 219, 105, 0.911);
+}
+
+.ReactModalPortal div div svg {
+  width: 30px;
+  height: 30px;
+  background-color: #303030;
+  border-radius: 4px;
 }
 
 .Areii {
@@ -72,5 +151,219 @@
 
 .WerewolfRole {
   background-image: url("../images/WerewolfRole.png");
+}
+
+@media only screen and (max-width: 600px) {
+  .ReactModalPortal div div {
+    width: 80%;
+    height: 80%;
+  }
+  header {
+    padding: 0 0px;
+  }
+  .project div {
+    height: 170px;
+    width: 260px;
+  }
+  .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .ReactModalPortal div div {
+    width: 50%;
+    height: 50%;
+  }
+  header {
+    padding: 0 25px;
+  }
+  .project div {
+    height: 230px;
+    width: 400px;
+  }
+  .skills {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  color: #303030;
+}
+
+body {
+  background-color: #dad8d8;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #4A4D54;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4A4D54;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 0px 3px 3px rgba(248, 219, 105, 0.911);
+          box-shadow: 0px 3px 3px rgba(248, 219, 105, 0.911);
+  border-bottom: rgba(248, 219, 105, 0.911) 2px solid;
+}
+
+header a {
+  padding: 20px;
+  color: #dad8d8;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+header nav a {
+  font-size: 20px;
+}
+
+header a:hover {
+  color: rgba(248, 219, 105, 0.911);
+}
+
+.skillsPage {
+  padding: 50px 0px;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills h4 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.skills li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.resume {
+  padding: 70px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("https://images.pexels.com/photos/34435/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.resume button {
+  padding: 18px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #4A4D54;
+  color: #dad8d8;
+  -webkit-box-shadow: 3px 3px 3px rgba(248, 219, 105, 0.911);
+          box-shadow: 3px 3px 3px rgba(248, 219, 105, 0.911);
+}
+
+.resume button:hover {
+  color: rgba(248, 219, 105, 0.911);
+}
+
+.links {
+  background-image: url("https://images.pexels.com/photos/1563332/pexels-photo-1563332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 70px 0px;
+}
+
+svg {
+  height: 70px;
+  width: 70px;
+  color: rgba(248, 219, 105, 0.911);
+}
+
+path {
+  color: rgba(248, 219, 105, 0.911);
+}
+
+path:hover {
+  color: #dad8d8;
+}
+
+.contact {
+  background: #4A4D54;
+  padding: 50px 0px;
+}
+
+.contact h2 {
+  color: rgba(248, 219, 105, 0.911);
+}
+
+.contact h3 {
+  text-align: center;
+  color: #dad8d8;
+  padding: 10px;
+}
+
+.whoami {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+.whoami p {
+  padding: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

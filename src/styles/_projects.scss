@@ -1,0 +1,126 @@
+$accent: rgba(248, 219, 105, 0.911);
+$secondColor: #4A4D54;
+$lightText: rgb(218, 216, 216);
+$darkText: rgb(48, 48, 48);
+
+.projectsPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 60px 10px;
+}
+
+
+.project {
+    border: 3px solid $secondColor;
+    border-radius: 2px;
+    margin: 20px;
+
+    div {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.ReactModalPortal {
+    color: $darkText;
+    div {
+        div {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                margin: 15px 0px;
+            }
+            
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            li {
+                list-style-type: none;
+                background-color: $accent;
+                padding: 5px;
+                border-radius: 3px;
+                margin: 5px;
+            }
+
+            .modalLinks {
+                display: flex;
+                flex-direction: row;
+                align-items: center;;
+                a {
+                    margin: 5px;
+                }
+            }
+
+            button {
+                background-color: $secondColor;
+                color: $lightText;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 3px;
+                border: none;
+            }
+
+            button:hover {
+                color: $accent;
+            }
+
+            svg {
+                width: 30px;
+                height: 30px;
+                background-color: $darkText;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.Areii {
+    background-image: url('../images/Areii.PNG');
+}
+
+.Pawesome {
+    background-image: url('../images/PawesomePets.PNG');
+}
+
+.AdviceAPI {
+    background-image: url('../images/AdviceAPI.png');
+}
+
+.Dalton {
+    background-image: url('../images/DaltonCottage.png');
+}
+
+.MarioPest {
+    background-image: url('../images/Mario.png');
+}
+
+.BountyHunter {
+    background-image: url('../images/BountyHunter.png');
+}
+
+.DJReact {
+    background-image: url('../images/DJReact.png');
+}
+
+.FloraMagazine {
+    background-image: url('../images/magazine.png');
+}
+
+.WerewolfRole {
+    background-image: url('../images/WerewolfRole.png');
+}

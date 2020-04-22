@@ -1,67 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import './projects';
+@import './media';
+
+$focalFont: 'Cormorant Garamond', serif;
+$bodyFont: 'Raleway', sans-serif;
+
+$leafImg: url("https://images.pexels.com/photos/1563332/pexels-photo-1563332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+$CherryImg: url("https://images.pexels.com/photos/34435/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+$yellowImg: url("https://images.pexels.com/photos/1039106/pexels-photo-1039106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+$headerImg: url("https://images.pexels.com/photos/1039109/pexels-photo-1039109.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+
+@mixin accentSection($thisImg) {
+    background-image: $thisImg;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $bodyFont;
+    color: $darkText;
 }
 
-.projectsPage {
+body {
+    background-color: $lightText;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: $secondColor;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-family: $focalFont;
+}
+
+header {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 60px 10px;
-}
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondColor;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 3px 3px $accent;
+    border-bottom: $accent 2px solid;
 
-
-.project {
-    border: black solid 1px;
-    margin: 20px;
-
-    div {
-        height: 230px;
-        width: 400px;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+    a {
+        padding: 20px;
+        color: $lightText;
+        text-decoration: none;
+        font-size: 28px;
+        font-family: $focalFont;
     }
 
-    h2 {
+    nav {
+        a {
+            font-size: 20px;
+        }
+    }
+
+    a:hover {
+        color: $accent;
+    }
+}
+
+.skillsPage {
+    padding: 50px 0px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+
+    h4 {
+        font-size: 20px;
+        padding: 10px;
         text-align: center;
+    }
+
+    li {
+        list-style-type: none;
+        text-align: center;
+    }
+}
+
+.resume {
+    padding: 70px 0px;
+    display: flex;
+    justify-content: center;
+    @include accentSection($CherryImg);
+
+    button {
+        padding: 18px;
+        border-radius: 5px;
+        font-size: 20px;
+        background-color: $secondColor;
+        color: $lightText;
+        box-shadow: 3px 3px 3px $accent;
+    }
+
+    button:hover {
+        color: $accent;
+    }
+}
+
+.links {
+    @include accentSection($leafImg);
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 0px;
+}
+
+svg {
+    height: 70px;
+    width: 70px;
+    color: $accent;
+}
+
+path {
+    color: $accent;
+}
+
+path:hover {
+    color: $lightText;
+}
+
+.contact {
+    background: $secondColor;
+    padding: 50px 0px;
+
+    h2 {
+        color: $accent;
+    }
+
+    h3 {
+        text-align: center;
+        color: $lightText;
         padding: 10px;
     }
 }
 
-.Areii {
-    background-image: url('../images/Areii.PNG');
-}
+.whoami {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0px;
 
-.Pawesome {
-    background-image: url('../images/PawesomePets.PNG');
-}
-
-.AdviceAPI {
-    background-image: url('../images/AdviceAPI.png');
-}
-
-.Dalton {
-    background-image: url('../images/DaltonCottage.png');
-}
-
-.MarioPest {
-    background-image: url('../images/Mario.png');
-}
-
-.BountyHunter {
-    background-image: url('../images/BountyHunter.png');
-}
-
-.DJReact {
-    background-image: url('../images/DJReact.png');
-}
-
-.FloraMagazine {
-    background-image: url('../images/magazine.png');
-}
-
-.WerewolfRole {
-    background-image: url('../images/WerewolfRole.png');
+    p {
+        padding: 10px;
+    }
 }

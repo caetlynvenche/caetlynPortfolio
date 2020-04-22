@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+    .ReactModalPortal {
+        div {
+            div {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+
+    header {
+        padding: 0 0px;
+    }
+
+    .project {
+        div {
+            height: 170px;
+            width: 260px;
+        }
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ReactModalPortal {
+        div {
+            div {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+
+    header {
+        padding: 0 25px;
+    }
+
+    .project {
+        div {
+            height: 230px;
+            width: 400px;
+        }
+    }
+
+    .skills {
+        flex-direction: row;
+    }
+}

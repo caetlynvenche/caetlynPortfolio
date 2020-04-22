@@ -7,7 +7,7 @@ import ContactMe from './ContactMe'
 
 const Home = () => {
     return (
-        <div>
+        <>
             <WhoAmI />
             
             <Resume />
@@ -17,7 +17,7 @@ const Home = () => {
             <Links />
             
             <ContactMe />
-        </div>
+        </>
     )
 }
 

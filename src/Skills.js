@@ -35,7 +35,9 @@ const Skills = () => {
                             <li>InDesign</li>
                             <li>Photoshop</li>
                             <li>Illustrator</li>
+                            <li>Procreate</li>
                             <li>React Native</li>
+                            <li>Labelbox</li>
                         </ul>
                     </div>
                 </div>

@@ -74,7 +74,7 @@
 
 .ReactModalPortal div div li {
   list-style-type: none;
-  background-color: rgba(248, 219, 105, 0.911);
+  background-color: #FEECA4;
   padding: 5px;
   border-radius: 3px;
   margin: 5px;
@@ -99,7 +99,7 @@
 
 .ReactModalPortal div div button {
   background-color: #4A4D54;
-  color: #dad8d8;
+  color: ghostwhite;
   padding: 10px;
   font-size: 15px;
   border-radius: 3px;
@@ -107,7 +107,7 @@
 }
 
 .ReactModalPortal div div button:hover {
-  color: rgba(248, 219, 105, 0.911);
+  color: #FEECA4;
 }
 
 .ReactModalPortal div div svg {
@@ -193,6 +193,62 @@
   }
 }
 
+@media only screen and (max-width: 1025px) {
+  .whoami {
+    width: 75% !important;
+  }
+  .skills {
+    padding: 0 30px !important;
+  }
+  .skills div {
+    width: 29% !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .whoami {
+    width: 90% !important;
+  }
+  .skills div {
+    width: 40% !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    padding: 70px 0;
+  }
+  .contact h2 {
+    margin-right: 0 !important;
+  }
+  .skills div {
+    width: 100% !important;
+    margin: 0 auto 30px !important;
+  }
+}
+
+@font-face {
+  font-family: 'Ogg';
+  src: url("../fonts/Ogg.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Ogg.eot?#iefix") format("embedded-opentype"), url("../fonts/Ogg.woff") format("woff"), url("../fonts/Ogg.ttf") format("truetype"), url("../fonts/Ogg.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Denmark';
+  src: url("../fonts/Denmark.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Denmark.eot?#iefix") format("embedded-opentype"), url("../fonts/Denmark.woff") format("woff"), url("../fonts/Denmark.ttf") format("truetype"), url("../fonts/Denmark.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -200,10 +256,11 @@
           box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   color: #303030;
+  letter-spacing: 1px;
 }
 
 body {
-  background-color: #dad8d8;
+  background-color: ghostwhite;
 }
 
 .toTop {
@@ -218,9 +275,9 @@ body {
 
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 38px;
   padding: 20px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Ogg", serif;
 }
 
 header {
@@ -241,29 +298,35 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-box-shadow: 0px 3px 3px rgba(248, 219, 105, 0.911);
-          box-shadow: 0px 3px 3px rgba(248, 219, 105, 0.911);
-  border-bottom: rgba(248, 219, 105, 0.911) 2px solid;
+  -webkit-box-shadow: 0px 3px 3px #FEECA4;
+          box-shadow: 0px 3px 3px #FEECA4;
+  border-bottom: #FEECA4 2px solid;
 }
 
 header a {
-  padding: 20px;
-  color: #dad8d8;
+  padding: 10px 20px;
+  color: ghostwhite;
   text-decoration: none;
   font-size: 28px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Ogg", serif;
 }
 
 header nav a {
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
 }
 
 header a:hover {
-  color: rgba(248, 219, 105, 0.911);
+  color: #FEECA4;
 }
 
 .skillsPage {
-  padding: 50px 0px;
+  padding: 100px 0px;
+}
+
+.skillsPage h2 {
+  margin-bottom: 20px;
+  padding-top: 0;
 }
 
 .skills {
@@ -272,21 +335,48 @@ header a:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.skills h4 {
-  font-size: 20px;
-  padding: 10px;
+.skills div {
+  background: #FEECA4;
+  margin: 0 20px;
+  width: 30%;
+}
+
+.skills div h4 {
+  font-size: 30px;
   text-align: center;
+  background: #4A4D54;
+  color: ghostwhite;
+  font-family: "Ogg", serif;
+  padding: 30px;
+  border: 5px solid #FEECA4;
 }
 
-.skills li {
+.skills div ul {
+  padding: 30px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills div li {
   list-style-type: none;
   text-align: center;
+  line-height: 25px;
+  width: 50%;
 }
 
 .resume {
-  padding: 70px 0px;
+  padding: 120px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,17 +391,23 @@ header a:hover {
 }
 
 .resume button {
-  padding: 18px;
-  border-radius: 5px;
+  padding: 25px 50px;
   font-size: 20px;
   background-color: #4A4D54;
-  color: #dad8d8;
-  -webkit-box-shadow: 3px 3px 3px rgba(248, 219, 105, 0.911);
-          box-shadow: 3px 3px 3px rgba(248, 219, 105, 0.911);
+  color: ghostwhite;
+  -webkit-box-shadow: 5px 5px 5px #FEECA4;
+          box-shadow: 5px 5px 5px #FEECA4;
+  border: none;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .resume button:hover {
-  color: rgba(248, 219, 105, 0.911);
+  color: #303030;
+  background-color: #FEECA4;
+  -webkit-box-shadow: 5px 5px 5px #303030;
+          box-shadow: 5px 5px 5px #303030;
+  cursor: pointer;
 }
 
 .links {
@@ -325,45 +421,82 @@ header a:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 70px 0px;
+  padding: 120px 0px;
 }
 
 svg {
-  height: 70px;
-  width: 70px;
-  color: rgba(248, 219, 105, 0.911);
+  height: 80px;
+  width: 80px;
+  color: #FEECA4;
 }
 
 path {
-  color: rgba(248, 219, 105, 0.911);
+  color: #FEECA4;
 }
 
 path:hover {
-  color: #dad8d8;
+  color: ghostwhite;
 }
 
 .contact {
   background: #4A4D54;
-  padding: 50px 0px;
+  padding: 100px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact h2 {
-  color: rgba(248, 219, 105, 0.911);
+  color: #FEECA4;
+  margin-right: 100px;
 }
 
 .contact h3 {
   text-align: center;
-  color: #dad8d8;
+  color: ghostwhite;
   padding: 10px;
 }
 
 .whoami {
-  width: 80%;
-  margin: auto;
-  padding: 50px 0px;
+  width: 50%;
+  margin: 100px auto;
+}
+
+.whoami .body {
+  background: #FEECA4;
+  padding: 30px;
+}
+
+.whoami .title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 5px solid #FEECA4;
+  background-color: #4A4D54;
+}
+
+.whoami .title h2 {
+  color: ghostwhite;
+  padding: 0;
+  font-family: "Denmark", serif;
+  font-size: 50px;
+}
+
+.whoami .title h3 {
+  color: ghostwhite;
+  text-align: center;
+  font-family: "Ogg", serif;
+  font-size: 28px;
 }
 
 .whoami p {
   padding: 10px;
+  line-height: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

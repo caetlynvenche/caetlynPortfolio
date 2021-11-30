@@ -49,3 +49,46 @@
         flex-direction: row;
     }
 }
+
+@media only screen and (max-width: 1025px) {
+    .whoami {
+        width: 75% !important;
+    }
+
+    .skills {
+        padding: 0 30px !important;
+        div {
+            width: 29% !important;
+            margin-bottom: 30px !important;
+        }
+    }
+}
+@media only screen and (max-width: 769px) {
+    .whoami {
+        width: 90% !important;
+    }
+
+    .skills {
+        div {
+            width: 40% !important;
+            margin-bottom: 30px !important;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .contact {
+        flex-direction: column !important;
+        padding: 70px 0;
+    
+        h2 {
+            margin-right: 0 !important;
+        }
+    }
+
+    .skills {
+        div {
+            width: 100% !important;
+            margin: 0 auto 30px !important;
+        }
+    }
+}

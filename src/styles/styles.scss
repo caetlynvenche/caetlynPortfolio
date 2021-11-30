@@ -3,8 +3,9 @@
 @import './projects';
 @import './media';
 
-$focalFont: 'Cormorant Garamond', serif;
+$focalFont: 'Ogg', serif;
 $bodyFont: 'Raleway', sans-serif;
+$scriptFont: 'Denmark', serif;
 
 $leafImg: url("https://images.pexels.com/photos/1563332/pexels-photo-1563332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
 $CherryImg: url("https://images.pexels.com/photos/34435/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500");
@@ -19,12 +20,30 @@ $headerImg: url("https://images.pexels.com/photos/1039109/pexels-photo-1039109.j
     background-size: cover;
 }
 
+@font-face {
+    font-family: 'Ogg';
+    src: url('../fonts/Ogg.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Ogg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Ogg.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Ogg.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Ogg.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Denmark';
+    src: url('../fonts/Denmark.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Denmark.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Denmark.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Denmark.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Denmark.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $bodyFont;
     color: $darkText;
+    letter-spacing: 1px;
 }
 
 body {
@@ -44,7 +63,7 @@ body {
 
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 38px;
     padding: 20px;
     font-family: $focalFont;
 }
@@ -61,7 +80,7 @@ header {
     border-bottom: $accent 2px solid;
 
     a {
-        padding: 20px;
+        padding: 10px 20px;
         color: $lightText;
         text-decoration: none;
         font-size: 28px;
@@ -70,7 +89,8 @@ header {
 
     nav {
         a {
-            font-size: 20px;
+            font-size: 16px;
+            font-family: $bodyFont;
         }
     }
 
@@ -80,42 +100,72 @@ header {
 }
 
 .skillsPage {
-    padding: 50px 0px;
+    padding: 100px 0px;
+
+    h2 {
+        margin-bottom: 20px;
+        padding-top: 0;
+    }
 }
 
 .skills {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
-    h4 {
-        font-size: 20px;
-        padding: 10px;
-        text-align: center;
-    }
+    
+    div {
+        background: $accent;
+        margin: 0 20px;
+        width: 30%;
+        
+        h4 {
+            font-size: 30px;
+            text-align: center;
+            background: $secondColor;
+            color: $lightText;
+            font-family: $focalFont;
+            padding: 30px;
+            border: 5px solid $accent;
+        }
 
-    li {
-        list-style-type: none;
-        text-align: center;
+        ul {
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    
+        li {
+            list-style-type: none;
+            text-align: center;
+            line-height: 25px;
+            width: 50%;
+        }
     }
 }
 
 .resume {
-    padding: 70px 0px;
+    padding: 120px 0px;
     display: flex;
     justify-content: center;
     @include accentSection($CherryImg);
 
     button {
-        padding: 18px;
-        border-radius: 5px;
+        padding: 25px 50px;
         font-size: 20px;
         background-color: $secondColor;
         color: $lightText;
-        box-shadow: 3px 3px 3px $accent;
+        box-shadow: 5px 5px 5px $accent;
+        border: none;
+        transition: all 500ms ease;
     }
 
     button:hover {
-        color: $accent;
+        color: $darkText;
+        background-color: $accent;
+        box-shadow: 5px 5px 5px $darkText;
+        cursor: pointer;
     }
 }
 
@@ -123,12 +173,12 @@ header {
     @include accentSection($leafImg);
     display: flex;
     justify-content: space-around;
-    padding: 70px 0px;
+    padding: 120px 0px;
 }
 
 svg {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     color: $accent;
 }
 
@@ -142,10 +192,14 @@ path:hover {
 
 .contact {
     background: $secondColor;
-    padding: 50px 0px;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     h2 {
         color: $accent;
+        margin-right: 100px;
     }
 
     h3 {
@@ -156,11 +210,36 @@ path:hover {
 }
 
 .whoami {
-    width: 80%;
-    margin: auto;
-    padding: 50px 0px;
+    width: 50%;
+    margin: 100px auto;
+
+    .body {
+        background: $accent;
+        padding: 30px;
+    }
+
+    .title {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 5px solid $accent;
+        background-color: $secondColor;
+
+        h2 {
+            color: ghostwhite;
+            padding: 0;
+            font-family: $scriptFont;
+            font-size: 50px;
+        }
+        h3 {
+            color: ghostwhite;
+            text-align: center;
+            font-family: $focalFont;
+            font-size: 28px;
+        }
+    }
 
     p {
         padding: 10px;
+        line-height: 30px;
     }
 }
